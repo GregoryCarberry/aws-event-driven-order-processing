@@ -1,0 +1,13 @@
+{
+"order_id": "order-standard-001",
+"customer_id": "customer-001",
+"order_type": "standard",
+"items": [
+{
+"sku": "SKU-001",
+"quantity": 2,
+"unit_price": 19.99
+}
+],
+"total_value": 39.98
+}

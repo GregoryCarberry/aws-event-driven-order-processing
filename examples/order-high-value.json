@@ -1,0 +1,13 @@
+{
+"order_id": "order-high-value-001",
+"customer_id": "customer-002",
+"order_type": "standard",
+"items": [
+{
+"sku": "SKU-999",
+"quantity": 1,
+"unit_price": 1500.00
+}
+],
+"total_value": 1500.00
+}
