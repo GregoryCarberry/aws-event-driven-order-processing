@@ -104,6 +104,15 @@ def validate_order(order):
     validated_items = [validate_order_item(item, index) for index, item in enumerate(items)]
 
     total_value = parse_positive_decimal(order.get("total_value"), "total_value")
+    expected_total = sum(
+        item["unit_price"] * item["quantity"]
+        for item in validated_items
+    )
+
+    if total_value != expected_total:
+        raise ValidationError(
+            f"total_value must match item total. Expected {expected_total}."
+        )
 
     return {
         "order_id": order_id,
